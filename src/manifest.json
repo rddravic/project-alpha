@@ -4,8 +4,8 @@
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
-  "scope": "/",
-  "start_url": "/",  
+  "scope": "./",
+  "start_url": "./index.html",  
   "orientation": "portrait",
   "icons": [
     {
@@ -40,7 +40,7 @@
     },
     {
       "src": "assets/icons/icon-192x192.png",
-      "sizes": "192x192",
+      "sizes": "192x192 512x512",
       "type": "image/png",
       "purpose": "maskable any"
     },

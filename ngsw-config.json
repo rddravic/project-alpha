@@ -9,13 +9,12 @@
         "files": [
           "/favicon.ico",
           "/index.html",
-          "/manifest.webmanifest",
+          "/manifest.json",
           "/*.css",
           "/*.js"
         ]
       }
-    },
-    {
+    }, {
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",
@@ -24,19 +23,6 @@
           "/assets/**",
           "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
         ]
-      }
-    }
-  ],
-  "dataGroups": [
-    {
-      "name": "alpha",
-      "urls": [
-        "https://project-alpha.stackblitz.io/**"
-      ],
-      "cacheConfig": {
-        "strategy": "performance",
-        "maxSize": 100,
-        "maxAge": "1d"
       }
     }
   ]
