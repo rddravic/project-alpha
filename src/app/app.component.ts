@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Network } from '@ngx-pwa/offline';
 
 @Component({
   selector: 'my-app',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
+  name = 'Alpha';
+  networkStatus$;
+  constructor(protected network: Network) {
+    this.networkStatus$ = this.network.onlineChanges;
+  }
 }
