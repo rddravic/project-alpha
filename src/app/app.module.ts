@@ -15,7 +15,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatNativeDateModule} from '@angular/material/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {AlphaMaterialModule} from './../alpha-material/alpha-material-module';
+import {AlphaMaterialModule} from './../alpha-material/alpha-material.module';
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 
 

@@ -1,8 +1,15 @@
-<mat-toolbar>
-  <span>My Application</span>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Alpha</span>
+    <span class="example-spacer"></span>
+    <mat-icon *ngIf="!user" svgIcon="google" (click)="signInWithGoogle()" class="example-icon pointer" aria-hidden="false"></mat-icon>
+    <div class="user">
+      <img src="https://demos.creative-tim.com/black-dashboard-angular/assets/img/anime3.png">
+    </div>
+  </mat-toolbar-row>
 </mat-toolbar>
 
-<hello name="{{ name }}"></hello>
+<hello name="{{ user.name }}"></hello>
 <p>
   Turn off your data and see some magic happen :)
 </p>
@@ -19,7 +26,10 @@
 </div>
 
 <div class="jumbotron bg-transparent text-center">
-  <button (click)="signInWithGoogle()">sign with google</button>
+  <button >sign with google</button>
+  <button mat-mini-fab color="primary" (click)="signInWithGoogle()">
+    <mat-icon svgIcon="google"></mat-icon>
+  </button>
   <div *ngIf="user" class="card text-center">
     <h6 class="card-header">
       Social Login Demo
