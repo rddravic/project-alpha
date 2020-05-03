@@ -10,7 +10,7 @@ import { SocialUser } from "angularx-social-login";
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent implements OnInit  {
-  name = 'Alpha';
+  name = 'Alpha User';
   networkStatus$;
   private user: SocialUser;
   private loggedIn: boolean;

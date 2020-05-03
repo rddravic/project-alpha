@@ -7,17 +7,16 @@ export const environment = {
 };
 
 export const googleCredentials = {
-  "web":
-  {
-    "client_id":"2953282896-uk6k1dlih7bfa0vnvrakldr2ud6mjn0r.apps.googleusercontent.com",
-    "project_id":"dev-project-alpha",
-    "auth_uri":"https://accounts.google.com/o/oauth2/auth",
-    "token_uri":"https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
-    "client_secret":"QRfaYY22muucctwgMWh4XP5t",
-    "redirect_uris":["https://dev-project-alpha.firebaseapp.com"],
-    "javascript_origins":["https://dev-project-alpha.firebaseapp.com"]
-  }
+	"web":{
+			"client_id":"2953282896-c535rpc4t3fg054708pcad7hi32l3p8q.apps.googleusercontent.com",
+			"project_id":"dev-project-alpha",
+			"auth_uri":"https://accounts.google.com/o/oauth2/auth",
+			"token_uri":"https://oauth2.googleapis.com/token",
+			"auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+			"client_secret":"zi4QiMc8C2mD-t6dfLowJxDk",
+			"redirect_uris":["https://project-alpha.stackblitz.io"],
+			"javascript_origins":["https://project-alpha.stackblitz.io"]
+			}
 };
 
 /*
