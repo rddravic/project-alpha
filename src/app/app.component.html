@@ -1,39 +1,36 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Alpha</span>
-    <span class="example-spacer"></span>
-    <mat-icon *ngIf="!user" svgIcon="google" (click)="signInWithGoogle()" class="example-icon pointer" aria-hidden="false"></mat-icon>
-    <div class="user">
-      <img src="https://demos.creative-tim.com/black-dashboard-angular/assets/img/anime3.png">
-    </div>
+	<mat-toolbar-row>
+		<span>Alpha</span>
+		<span class="example-spacer"></span>
+		<mat-icon *ngIf="!user" svgIcon="google" (click)="signInWithGoogle()" class="example-icon pointer"
+			aria-hidden="false"></mat-icon>
+		<img *ngIf="user" class="user" src="{{ user.photoUrl }}">
+    <mat-icon class="example-icon pointer" *ngIf="user" (click)="signOut()">exit_to_app</mat-icon>
   </mat-toolbar-row>
 </mat-toolbar>
+<h3>Welcome to ProjectAlpha</h3>
 
-<hello name="{{ user.name }}"></hello>
-<p>
-  Turn off your data and see some magic happen :)
-</p>
-
-<div class="container">
-	<div class="online" *ngIf="networkStatus$ | async; else offline">
-		Online 😁
-	</div>
-	<ng-template #offline>
-		<div class="offline">
-			Offline 😎
+<hello *ngIf="user" name="{{ user.name }}"></hello>
+<div *ngIf="user">	
+	<p>
+		Turn off your data and see some magic happen :)
+	</p>
+	<div class="container">
+		<div class="online" *ngIf="networkStatus$ | async; else offline">
+			Online 😁
 		</div>
-	</ng-template>
+		<ng-template #offline>
+			<div class="offline">
+				Offline 😎
+			</div>
+		</ng-template>
+	</div>
 </div>
 
-<div class="jumbotron bg-transparent text-center">
-  <button >sign with google</button>
-  <button mat-mini-fab color="primary" (click)="signInWithGoogle()">
-    <mat-icon svgIcon="google"></mat-icon>
-  </button>
+
+
+<!-- <div class="jumbotron bg-transparent text-center">
   <div *ngIf="user" class="card text-center">
-    <h6 class="card-header">
-      Social Login Demo
-    </h6>
     <div class="card-block"></div>
     <img class="card-img-top img-responsive photo" src="{{ user.photoUrl }}">
     <div class="card-block">
@@ -44,4 +41,4 @@
       <button class="btn btn-danger" (click)="signOut()">Sign out</button>
     </div>
   </div>
-</div>
+</div> -->
