@@ -44,7 +44,7 @@ export function provideConfig() {
     MatNativeDateModule,
     ReactiveFormsModule,
     SocialLoginModule,
-  ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })],
+  ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   entryComponents: [AppComponent],
   declarations: [ AppComponent, HelloComponent ],
   bootstrap: [AppComponent],
